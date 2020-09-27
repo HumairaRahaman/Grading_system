@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grading System</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+	<link rel="stylesheet"  href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Grade Scale</h1>
+		<p>Input your Subject Marks</p>
+		<div class="row justify-content-center">
+			<div class="col-5">
+				<input  id="input" type="text" placeholder="your marks" class="form-control" maxlength="3">
+				<p class="out" id="output"></p>
+				<button type="button" onclick="words()"  class="btn btn-custom">What's My Grade?</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+			
+      function words()
+   {
+   			var grade = document.getElementById("input").value;
+			var result = document.getElementById("output");
+
+
+			if(grade >= 90 && grade <=100){
+				result.innerHTML = "You Letter grade = A+ & grade point = 4 ";
+			}
+
+			else if(grade >= 80 && grade <=89){
+				result.innerHTML = "You Letter grade = A & grade point = 3.50 ";
+			
+			}
+
+			else if(grade >= 70 && grade <=79){
+				result.innerHTML = "You Letter grade = B+ & grade point = 3.0 ";
+			}
+
+			else if(grade >= 60 && grade <=69){
+				result.innerHTML = "You Letter grade = B & grade point = 2.50 ";
+			}
+
+			else if(grade >= 50 && grade <=59){
+				result.innerHTML = "You Letter grade = C+ & grade point = 2.0 ";
+			}
+
+			else if(grade >= 40 && grade <=49){
+				result.innerHTML = "You Letter grade = C & grade point = 1.5 ";
+			}
+
+			else if(grade >= 33 && grade <=39){
+				result.innerHTML = "You Letter grade = D & grade point = 1.0 ";
+			}
+
+			else if(grade <=32 && grade>=0){
+				result.innerHTML = "You Letter grade = F & grade point = 0 ";
+			}
+
+			else{
+				window.alert("Please take care of yourself");
+			}
+}
+		
+	</script>
+
+
+
+</body>
+</html>
